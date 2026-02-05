@@ -129,4 +129,50 @@ export const config = {
       includeLanguagePrefix: true,
     }),
   },
+        // Custom tools for content creation
+  articleSummary: {
+    icon: <CardHeading />,
+    label: 'Article: Summary for Edu',
+    genPrompt: createGenPrompt({
+      message:
+        'You are an expert content analyst. Create a structured educational summary of the following article with: 1) Main topic and key thesis, 2) Key points as bullet list, 3) Important concepts to explore further, 4) Potential lesson structure',
+      includeLanguagePrefix: true,
+    }),
+  },
+  videoScript: {
+    icon: <ChatText />,
+    label: 'Video: Generate Script',
+    genPrompt: createGenPrompt({
+      message:
+        'You are a professional video scriptwriter. Transform the following content into an engaging video script with: 1) Hook (first 10 seconds), 2) Introduction, 3) Main content blocks with transitions, 4) Call to action. Include timing suggestions and visual cues',
+      includeLanguagePrefix: true,
+    }),
+  },
+  videoScenes: {
+    icon: <CardList />,
+    label: 'Video: Split into Scenes',
+    genPrompt: createGenPrompt({
+      message:
+        'You are a video editor. Break down the following script into production scenes. For each scene provide: 1) Scene number and duration, 2) Visual description (what to show), 3) Narrator text, 4) B-roll suggestions',
+      includeLanguagePrefix: true,
+    }),
+  },
+  newsDigest: {
+    icon: <CardHeading />,
+    label: 'News: Create Digest',
+    genPrompt: createGenPrompt({
+      message:
+        'You are a news analyst. Create a structured digest from the following news items: 1) Main trends and themes, 2) Most important developments by topic, 3) What matters for aviation/logistics/tech industries, 4) Summary in 2-3 sentences',
+      includeLanguagePrefix: true,
+    }),
+  },
+  newsToVideo: {
+    icon: <ChatText />,
+    label: 'News: Convert to Video Script',
+    genPrompt: createGenPrompt({
+      message:
+        'You are a news video producer. Convert the following news into a short video script (2-3 minutes) with: 1) Catchy opening hook, 2) Key facts presented clearly, 3) Why it matters, 4) Closing summary. Keep it dynamic and engaging',
+      includeLanguagePrefix: true,
+    }),
+  },
 }
